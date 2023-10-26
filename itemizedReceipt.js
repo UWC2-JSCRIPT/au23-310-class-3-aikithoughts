@@ -2,6 +2,15 @@
 // with these properties: {descr, price}
 // i.e. {descr: 'Coke', price: 1.99}
 // function should log each item to the console and log a total price
+const logReceipt = (...items) => {
+  let totalPrice = 0;
+  items.forEach(item => {
+    console.log(`${item.descr} - ${item.price}`)
+    totalPrice = totalPrice + item.price;
+  })
+  console.log("Total -", totalPrice);
+
+};
 
 
 
