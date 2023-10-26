@@ -1,15 +1,40 @@
 // 1. Create attack function below.  This will take the following parameters:
 // attackingPlayer, defendingPlayer, baseDamage, variableDamage
 
+// function attack (attackingPlayer, defendingPlayer, baseDamage, variableDamage) {
+//   const minDamageInclusive = Math.floor(0);
+//   const maxDamageInclusive = Math.ceil(variableDamage);
+//   const randomDamage = Math.floor(Math.random() * (maxDamageInclusive - minDamageInclusive + 1) + minDamageInclusive);
+//   const totalDamage = baseDamage + randomDamage;
+//   defendingPlayer.health = defendingPlayer.health - totalDamage;
+//   return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage}.`
+
+// }
 
 
 // 2. Create player1 and player2 objects below
 // Each should have a name property of your choosing, and health property equal to 10
+const player1 = {
+  "name": "Max",
+  "health": 10
+}
 
+const player2 = {
+  "name": "Jakob",
+  "health": 10
+}
 
 
 // 3. Refactor attack function to an arrow function.  Comment out function above.
+const attack = (attackingPlayer, defendingPlayer, baseDamage, variableDamage) => {
+  const minDamageInclusive = Math.floor(0);
+  const maxDamageInclusive = Math.ceil(variableDamage);
+  const randomDamage = Math.floor(Math.random() * (maxDamageInclusive - minDamageInclusive + 1) + minDamageInclusive);
+  const totalDamage = baseDamage + randomDamage;
+  defendingPlayer.health = defendingPlayer.health - totalDamage;
+  return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage}.`
 
+}
 
 
 // DO NOT MODIFY THE CODE BELOW THIS LINE
